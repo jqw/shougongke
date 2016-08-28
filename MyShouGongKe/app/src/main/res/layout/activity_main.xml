@@ -1,16 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myradio="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.example.jiangqiangwei.myshougongke.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/container_mainactivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_main_buttonmenus"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.example.jiangqiangwei.myshougongke.view.MyRadioButton
+            style="@style/rb_main_style"
+            myradio:drawableTop="@drawable/tab_main_homepage"
+            myradio:drawableSize="30dp"
+            android:text="@string/homepage"
+            android:clickable="true"
+            android:textSize="16sp"
+            android:textColor="@drawable/tab_main_textcolor"
+            />
+
+        <com.example.jiangqiangwei.myshougongke.view.MyRadioButton
+            style="@style/rb_main_style"
+            myradio:drawableTop="@drawable/tab_main_jiaocheng"
+            myradio:drawableSize="30dp"
+            android:clickable="true"
+            android:text="教程"
+            android:textSize="16sp"
+            android:textColor="@drawable/tab_main_textcolor"/>
+
+        <com.example.jiangqiangwei.myshougongke.view.MyRadioButton
+            style="@style/rb_main_style"
+            myradio:drawableTop="@drawable/tab_main_shougongquan"
+            myradio:drawableSize="30dp"
+            android:clickable="true"
+            android:text="手工圈"
+            android:textSize="16sp"
+            android:textColor="@drawable/tab_main_textcolor"/>
+
+        <com.example.jiangqiangwei.myshougongke.view.MyRadioButton
+            style="@style/rb_main_style"
+            myradio:drawableTop="@drawable/tab_main_jishi"
+            myradio:drawableSize="30dp"
+            android:clickable="true"
+            android:text="市集"
+            android:textSize="16sp"
+            android:textColor="@drawable/tab_main_textcolor"/>
+
+        <com.example.jiangqiangwei.myshougongke.view.MyRadioButton
+            myradio:drawableTop="@drawable/tab_main_mine"
+            myradio:drawableSize="30dp"
+            style="@style/rb_main_style"
+            android:clickable="true"
+            android:text="我的"
+            android:textSize="16sp"
+            android:textColor="@drawable/tab_main_textcolor"/>
+    </RadioGroup>
+
+</LinearLayout>
