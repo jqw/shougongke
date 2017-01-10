@@ -36,7 +36,7 @@
 
         <com.example.jiangqiangwei.myshougongke.view.MyRadioButton
             style="@style/rb_main_style"
-            myradio:drawableTop="@drawable/tab_main_jiaocheng"
+            myradio:drawableTop="@drawable/tab_main_community"
             myradio:drawableSize="30dp"
             android:clickable="true"
             android:text="教程"
@@ -45,7 +45,7 @@
 
         <com.example.jiangqiangwei.myshougongke.view.MyRadioButton
             style="@style/rb_main_style"
-            myradio:drawableTop="@drawable/tab_main_shougongquan"
+            myradio:drawableTop="@drawable/tab_main_discover"
             myradio:drawableSize="30dp"
             android:clickable="true"
             android:text="手工圈"
@@ -54,7 +54,7 @@
 
         <com.example.jiangqiangwei.myshougongke.view.MyRadioButton
             style="@style/rb_main_style"
-            myradio:drawableTop="@drawable/tab_main_jishi"
+            myradio:drawableTop="@drawable/tab_main_message"
             myradio:drawableSize="30dp"
             android:clickable="true"
             android:text="市集"

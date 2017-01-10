@@ -5,11 +5,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
 
-import com.example.jiangqiangwei.myshougongke.fragment.HomePageFragment;
-import com.example.jiangqiangwei.myshougongke.fragment.JIshiFragment;
-import com.example.jiangqiangwei.myshougongke.fragment.JiaoChengFragment;
-import com.example.jiangqiangwei.myshougongke.fragment.MineFragment;
-import com.example.jiangqiangwei.myshougongke.fragment.ShouGongQuanFragment;
+import com.example.jiangqiangwei.myshougongke.ui.fragment.HomePageFragment;
+import com.example.jiangqiangwei.myshougongke.ui.fragment.JIshiFragment;
+import com.example.jiangqiangwei.myshougongke.ui.fragment.JiaoChengFragment;
+import com.example.jiangqiangwei.myshougongke.ui.fragment.MineFragment;
+import com.example.jiangqiangwei.myshougongke.ui.fragment.ShouGongQuanFragment;
 import com.example.jiangqiangwei.myshougongke.view.TabUtils;
 
 import java.util.ArrayList;
@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
         fragmentLists.add(mineFragment);
 
         radioGroup = (RadioGroup) findViewById(R.id.rg_main_buttonmenus);
-        tabUtils = new TabUtils(getSupportFragmentManager(), fragmentLists, R.id.container_mainactivity, radioGroup);
+        tabUtils = new
+                TabUtils(getSupportFragmentManager(), fragmentLists, R.id.container_mainactivity, radioGroup);
 
     }
 }

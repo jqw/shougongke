@@ -1,13 +1,63 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jiangqiangwei.myshougongke.fragment.HomePageFragment">
+    tools:context=".ui.fragment.HomePageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--跟随滚动-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_fragmenthome_topmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/btn_navigation_search"
+                    android:layout_alignParentLeft="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="16sp"
+                    android:text="唐品"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/btn_navigation_cart"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <!--固定在顶部-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout_fragmenthome_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="scrollable"
+            app:tabTextColor="@color/gray"
+            app:tabSelectedTextColor="@color/red"
+            app:tabIndicatorColor="@color/red">
+        </android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_fragmenthome_show"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="homepage" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+    </android.support.v4.view.ViewPager>
 
-</FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>
